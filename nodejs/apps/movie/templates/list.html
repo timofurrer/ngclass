@@ -3,16 +3,20 @@
 
     <div class="alert alert-danger" ng-show="main.error">{{ main.error }}</div>
 
-    <input type="text" placeholder="Search ..." ng-model="main.searchTerm" class="form-control" style="width: 300px;" />
-    <br>
-    <select ng-model="main.orderTerm" ng-options="o.option as o.name for o in main.orderOptions" class="form-control" style="width: 300px;"></select>
-    <br>
-
-    <a href="#/add" class="btn btn-default">
-        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-    </a>
-    <br>
-    <br>
+    <form class="form-inline">
+        <a href="#/add" class="btn btn-default" style="height: 33px;">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        </a>
+        <div class="input-group">
+            <span class="input-group-addon glyphicon glyphicon-search" aria-hidden="true"></span>
+            <input type="text" placeholder="Search ..." ng-model="main.searchTerm" class="form-control" style="width: 300px;" />
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon glyphicon glyphicon-sort-by-attributes" aria-hidden="true"></span>
+            <select ng-model="main.orderTerm" ng-options="o.option as o.name for o in main.orderOptions" class="form-control" style="width: 300px;"></select>
+        </div>
+        <br>
+    </form>
 
     <table class="table" ng-hide="main.error">
         <tr>
@@ -27,7 +31,7 @@
             <td ng-class="main.rateMovie(movie)" ng-bind-html="movie.rating | stars"></td>
             <td>
                 <button  class="btn btn-default" ng-click="main.gotoMovie($index)">
-                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
                 </button>
                 <a href="#/edit/{{ movie.id }}" class="btn btn-default">
                     <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>

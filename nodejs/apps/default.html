@@ -21,6 +21,9 @@
           <li class="active">Movie</li>
         </ol>
         <div ng-view></div>
+        <div class="alert alert-primary" ng-show="shell.getRequestCount()">
+            Loading ...
+        </div>
         <div class="alert alert-danger" ng-repeat="error in shell.currentErrors">
             {{ error }}
         </div>
@@ -34,6 +37,7 @@
 
     <script src="/common/module.js"></script>
     <script src="/common/js/services/movieData.js"></script>
+    <script src="/common/js/services/requestCounter.js"></script>
 
     <!-- Movie App Javascript source -->
     <script src="/movie/module.js"></script>
