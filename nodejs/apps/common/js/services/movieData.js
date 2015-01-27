@@ -61,7 +61,7 @@
 
             this.setBaseUrl = function(newUrl) {
                 baseUrl = newUrl;
-            }
+            };
 
             this.$get = movieData;
 

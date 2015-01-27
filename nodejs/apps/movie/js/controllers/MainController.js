@@ -32,16 +32,6 @@
             var id = self.movies[index].id;
             $location.path('/details/' + id);
         };
-
-        this.message = {
-            greeting: 'Hello World',
-            currentWeather: 'Cold'
-        };
-
-        this.changeMessage = function() {
-            this.message.greeting = 'Hello, Switzerland';
-            this.message.currentWeather = 'warming up';
-        };
     };
 
     var app = angular.module('moviesApp');
