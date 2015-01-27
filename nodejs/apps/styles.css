@@ -22,6 +22,6 @@ a:link, a:active, a:visited, a:hover {
     text-decoration: none;
 }
 
-input.ng-invalid {
+input.ng-invalid.ng-dirty {
   border: 1px solid red;
 }

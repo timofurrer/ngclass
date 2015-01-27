@@ -8,6 +8,10 @@
     <select ng-model="main.orderTerm" ng-options="o.option as o.name for o in main.orderOptions" class="form-control" style="width: 300px;"></select>
     <br>
 
+    <a href="#/add" class="btn btn-success">Add Movie</a>
+    <br>
+    <br>
+
     <table class="table" ng-hide="main.error">
         <tr>
             <th>Title</th>
@@ -18,10 +22,11 @@
         <tr ng-repeat="movie in main.movies | filter:{title:main.searchTerm} | orderBy:main.orderTerm">
             <td><a ng-href="#/details/{{ movie.id }}">{{ movie.title }}</a></td>
             <td>{{ movie.year }}</td>
-            <td ng-class="main.rateMovie(movie)">{{ movie.rating | stars }}</td>
+            <td ng-class="main.rateMovie(movie)" ng-bind-html="movie.rating | stars"></td>
             <td>
-                <a href="#/edit/{{ movie.id }}" class="btn btn-default">Edit</a>
                 <button  class="btn btn-default" ng-click="main.gotoMovie($index)">Details</button>
+                <a href="#/edit/{{ movie.id }}" class="btn btn-primary">Edit</a>
+                <a href="#/delete/{{ movie.id }}" class="btn btn-danger">Delete</a>
             </td>
         </tr>
     </table>

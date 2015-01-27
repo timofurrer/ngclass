@@ -24,7 +24,7 @@
         self.reset = function() {
             $log.info("resetting movie");
             self.movie = self.originalMovie;
-        }
+        };
     };
 
     module.controller('EditController', EditController);

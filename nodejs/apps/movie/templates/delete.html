@@ -1,0 +1,7 @@
+<div ng-controller="DeleteController as delete">
+    <h1>Delete {{ delete.movie.title }}</h1>
+
+    <label class="control-label">Are you sure you want to delete this movie?</label>
+    <button class="btn btn-danger" ng-click="delete.delete()">Yes</button>
+    <button class="btn btn-success" ng-click="delete.goToList()">No</button>
+</div>

@@ -1,10 +1,10 @@
 (function(module) {
 
-    var stars = function($log) {
+    var stars = function($sce) {
         return function(value) {
             var result = '';
             for(var i = 0; i < value; i++) {
-                result += '*';
+                result += '<span class="glyphicon glyphicon-star" aria-hidden="true"></span>';
             }
             return result;
         };
