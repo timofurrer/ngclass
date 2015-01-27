@@ -1,0 +1,14 @@
+(function() {
+    var DetailsController = function(movieData, $routeParams) {
+        var self = this;
+
+        var id = $routeParams.id;
+        movieData.getById(id)
+            .then(function(movie) {
+                self.movie = movie;
+            });
+    };
+
+    var app = angular.module('moviesApp');
+    app.controller('DetailsController', DetailsController);
+}());

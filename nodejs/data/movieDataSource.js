@@ -7,6 +7,7 @@ var movies = [];
 movies.push(new Movie(1, "Star Wars", 5, 1977));
 movies.push(new Movie(2, "Casablanca", 4, 1942));
 movies.push(new Movie(3, "Jurassic Park", 3, 1993));
+movies.push(new Movie(3, "Bad Movie", 2, 2014));
 
 var getAll = function() {
     return movies;

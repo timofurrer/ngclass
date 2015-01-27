@@ -1,0 +1,10 @@
+<div ng-controller="DetailsController as details">
+    <h1>Details of movie {{ details.movie.title }}</h1>
+    <div class="panel panel-default">
+        <div class="panel-heading">{{ details.movie.title }}</div>
+        <div class="panel-body">
+            <div>From: {{ details.movie.year }}</div>
+            <div>Rating: {{ details.movie.rating }}</div>
+        </div>
+    </div>
+</div>

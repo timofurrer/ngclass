@@ -1,0 +1,33 @@
+<div ng-controller="EditController as edit">
+    <h1>Editing {{ edit.movie.title }}</h1>
+
+    <form name="editForm" ng-submit="edit.save(editForm.$valid)">
+        <div class="form-group">
+            <label class="control-label">Title</label>
+            <input type="text" name="title" ng-model="edit.movie.title" ng-model-options="{ updateOn: 'blur' }" class="form-control" required maxlength="20" />
+            <div ng-messages="editForm.title.$error">
+                <div ng-message="required">The title is required</div>
+                <div ng-message="maxlength">Title is too long</div>
+            </div>
+            <br>
+        </div>
+        <div class="form-group">
+            <label class="control-label">Year of Release</label>
+            <input type="number" name="year" ng-model="edit.movie.year" class="form-control" required />
+            <br>
+        </div>
+        <div class="form-group">
+            <label class="control-label">Rating</label>
+            <input type="number" min="1" max="5" name="rating" ng-model="edit.movie.rating" class="form-control" required />
+            <br>
+        </div>
+        <button type="submit" class="btn btn-success">Save</button>
+        <button type="button" class="btn btn-warning" ng-click="edit.reset()">Reset</button>
+    </form>
+
+    <hr />
+
+    <pre>
+        {{ editForm | json }}
+    </pre>
+</div>
