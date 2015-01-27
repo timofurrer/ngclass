@@ -19,6 +19,7 @@
                 $log.info("Data is valid");
                 movieData.save(self.movie).then(goToDetails);
             }
+
         };
 
         self.reset = function() {

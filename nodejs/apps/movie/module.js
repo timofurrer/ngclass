@@ -1,5 +1,10 @@
 (function(undefined) {
-    var module = angular.module('moviesApp', ['ng', 'ngRoute', 'ngMessages', 'ngSanitize']);
+    var module = angular.module('moviesApp', ['ng', 'common', 'ngRoute', 'ngMessages', 'ngSanitize']);
+
+    module.config(function(movieDataProvider) {
+        movieDataProvider.setBaseUrl('/api/movies/');
+    });
+
     module.config(function($routeProvider) {
         $routeProvider
             .when('/list', {

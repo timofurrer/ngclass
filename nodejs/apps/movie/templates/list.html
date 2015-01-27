@@ -8,7 +8,9 @@
     <select ng-model="main.orderTerm" ng-options="o.option as o.name for o in main.orderOptions" class="form-control" style="width: 300px;"></select>
     <br>
 
-    <a href="#/add" class="btn btn-success">Add Movie</a>
+    <a href="#/add" class="btn btn-default">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+    </a>
     <br>
     <br>
 
@@ -24,9 +26,15 @@
             <td>{{ movie.year }}</td>
             <td ng-class="main.rateMovie(movie)" ng-bind-html="movie.rating | stars"></td>
             <td>
-                <button  class="btn btn-default" ng-click="main.gotoMovie($index)">Details</button>
-                <a href="#/edit/{{ movie.id }}" class="btn btn-primary">Edit</a>
-                <a href="#/delete/{{ movie.id }}" class="btn btn-danger">Delete</a>
+                <button  class="btn btn-default" ng-click="main.gotoMovie($index)">
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                </button>
+                <a href="#/edit/{{ movie.id }}" class="btn btn-default">
+                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                </a>
+                <a href="#/delete/{{ movie.id }}" class="btn btn-default">
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                </a>
             </td>
         </tr>
     </table>

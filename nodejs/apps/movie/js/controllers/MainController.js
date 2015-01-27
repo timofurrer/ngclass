@@ -2,6 +2,8 @@
     var MainController = function(movieData, $location) {
         var self = this;
 
+        //throw new Error('Error due to stupidity');
+
         self.searchTerm = '';
         self.orderOptions = [
             { name: 'Title', option: '+title' },
