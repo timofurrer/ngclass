@@ -28,11 +28,14 @@
         <tr ng-repeat="movie in main.movies | filter:{title:main.searchTerm} | orderBy:main.orderTerm">
             <td><a ng-href="#/details/{{ movie.id }}">{{ movie.title }}</a></td>
             <td>{{ movie.year }}</td>
-            <td ng-class="main.rateMovie(movie)" ng-bind-html="movie.rating | stars"></td>
+            <!--<td ng-class="main.rateMovie(movie)" ng-bind-html="movie.rating | stars"></td>-->
             <td>
-                <button  class="btn btn-default" ng-click="main.gotoMovie($index)">
+                <rating movie="movie" />
+            </td>
+            <td>
+                <a href="#/details/{{ movie.id }}" class="btn btn-default">
                     <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-                </button>
+                </a>
                 <a href="#/edit/{{ movie.id }}" class="btn btn-default">
                     <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
                 </a>

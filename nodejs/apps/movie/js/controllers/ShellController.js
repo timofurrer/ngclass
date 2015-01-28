@@ -8,6 +8,10 @@
             return requestCounter.getCurrentRequestCount();
         };
 
+        self.closeError = function(error) {
+            return errors.removeError(error);
+        };
+
     };
 
     module.controller('ShellController', ShellController);

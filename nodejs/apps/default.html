@@ -25,15 +25,9 @@
             Loading ...
         </div>
 
-        <alert type="danger">
-            This is dangerous!
+        <alert ng-repeat="error in shell.currentErrors" type="{{ error.type }}" reason="error.reason" close="shell.closeError(error)">
+            {{ error.message }}
         </alert>
-        <alert type="success">
-            This is dangerous!
-        </alert>
-        <div class="alert alert-danger" ng-repeat="error in shell.currentErrors">
-            {{ error }}
-        </div>
     </div>
 
     <!-- AngularJS modules -->
@@ -46,6 +40,9 @@
     <script src="/common/js/services/movieData.js"></script>
     <script src="/common/js/services/requestCounter.js"></script>
     <script src="/common/js/directives/alert.js"></script>
+    <script src="/common/js/directives/startsWith.js"></script>
+    <script src="/common/js/directives/rating.js"></script>
+    <script src="/common/js/controllers/RatingController.js"></script>
 
     <!-- Movie App Javascript source -->
     <script src="/movie/module.js"></script>

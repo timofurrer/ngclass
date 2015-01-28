@@ -7,15 +7,21 @@
             restrict: 'E',
             templateUrl: '/common/templates/alert.html',
             transclude: true,
-            link: function(scope, element, attributes) {
-                var type = attributes.type || 'warning';
-                element.children().addClass('alert alert-' + type);
+            scope: {
+                // this is an isolated scope
+                type: '@',
+                reason: '=',
+                close: '&'
+            },
+            //link: function(scope, element, attributes) {
+                ////var type = attributes.type || 'warning';
+                ////element.children().addClass('alert alert-' + type);
 
-                var closeSpan = element[0].querySelector('span.close');
-                angular.element(closeSpan).on('click', function() {
-                    element.remove();
-                });
-            }
+                ////var closeSpan = element[0].querySelector('span.close');
+                ////angular.element(closeSpan).on('click', function() {
+                    ////element.remove();
+                ////});
+            //}
         };
     };
 

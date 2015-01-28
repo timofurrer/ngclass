@@ -1,0 +1,3 @@
+<div>
+    <span ng-repeat="star in rating.stars track by $index" style="cursor: pointer;" ng-class="rating.applyClasses($index)" ng-click="rating.setRating($index)" ng-mouseover="rating.preview($index)" ng-mouseout="rating.unpreview()"></span>
+</div>

@@ -1,4 +1,6 @@
-<div>
-    <span class="close">X</span>
+<div class="alert alert-{{ type }}">
+    <span class="close" ng-close="close()">X</span>
     <div ng--transclude></div>
+    <br>
+    <input text="text" ng-model="reason" class="form-control" placeholder="Give it a reason" />
 </div>
