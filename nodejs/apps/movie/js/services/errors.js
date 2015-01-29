@@ -39,14 +39,11 @@
             return currentErrors;
         };
 
-        addError("Some strange error");
-        addError("Some strange error 1");
-        addError("Some strange error 2");
-
         return {
             addError: addError,
             removeError: removeError,
-            getCurrentErrors: getCurrentErrors
+            getCurrentErrors: getCurrentErrors,
+            handle: handle
         };
     };
 

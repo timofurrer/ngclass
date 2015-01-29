@@ -5,11 +5,11 @@
         <div class="form-group">
             <label class="control-label">Title</label>
             <!--<input type="text" name="title" ng-model="edit.movie.title" ng-model-options="{ updateOn: 'blur' }" class="form-control" required starts-with="S" maxlength="20" />-->
-            <input type="text" name="title" ng-model="edit.movie.title" class="form-control" required starts-with="S" maxlength="20" />
+            <input type="text" name="title" ng-model="edit.movie.title" class="form-control" required maxlength="30" />
             <div ng-messages="editForm.title.$error">
                 <div ng-message="required">The title is required</div>
                 <div ng-message="maxlength">Title is too long</div>
-                <div ng-message="startsWith">You have to start the title with S</div>
+                <!--<div ng-message="startsWith">You have to start the title with S</div>-->
             </div>
             <br>
         </div>

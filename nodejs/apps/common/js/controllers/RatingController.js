@@ -3,7 +3,7 @@
         var self = this;
 
         self.movie = {};
-        self.stars = new Array(6);
+        self.stars = new Array(5);
         self.previewIndex = null;
 
         self.init = function(movie) {

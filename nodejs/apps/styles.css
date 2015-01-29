@@ -2,7 +2,6 @@ body {
     background-color: #FFFFFF;
 }
 
-
 .ng-cloak {
     display: none;
 }
@@ -24,4 +23,10 @@ a:link, a:active, a:visited, a:hover {
 
 input.ng-invalid.ng-dirty {
   border: 1px solid red;
+}
+
+.ng-enter {
+  animation: fadeInRight 1s;
+  -moz-animation: fadeInRight 1s;
+  -o-animation: fadeInRight 1s;
 }

@@ -4,7 +4,7 @@
     <form name="addForm" ng-submit="add.save(addForm.$valid)">
         <div class="form-group">
             <label class="control-label">Title</label>
-            <input type="text" name="title" ng-model="add.movie.title" ng-model-options="{ updateOn: 'blur' }" class="form-control" required maxlength="20" />
+            <input type="text" name="title" ng-model="add.movie.title" ng-model-options="{ updateOn: 'blur' }" class="form-control" required maxlength="30" />
             <div ng-messages="editForm.title.$error">
                 <div ng-message="required">The title is required</div>
                 <div ng-message="maxlength">Title is too long</div>
